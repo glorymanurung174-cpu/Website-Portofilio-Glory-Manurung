@@ -3,89 +3,281 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Skills and expertise of Glory Manurung – Web Design, Frontend & Backend Development, UI/UX, and more." />
     <title>Skills - Glory Manurung</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/skills.css" />
   </head>
   <body>
+    <!-- Navigation -->
     <nav>
       <div class="container">
         <a href="index.html" class="logo">Glory Manurung</a>
         <ul>
           <li>
-            <a href="index.html"><i class="bx bx-home"></i> Home</a>
+            <a href="index.html"><img src="logo/home.svg" class="icon" alt="Home"> Home</a>
           </li>
           <li>
-            <a href="about.html"><i class="bx bx-user"></i> About</a>
+            <a href="blog.html"><img src="logo/user.svg" class="icon" alt="User"> Blog</a>
           </li>
           <li>
-            <a href="skills.html" class="active"
-              ><i class="bx bx-code-alt"></i> Skills</a
-            >
+            <a href="skills.html" class="active"><img src="logo/code-alt.svg" class="icon" alt="Skills"> Skills</a>
           </li>
           <li>
-            <a href="portfolio.html"
-              ><i class="bx bx-briefcase"></i> Portfolio</a
-            >
+            <a href="gallery.html"><img src="logo/education.svg" class="icon" alt="Portfolio"> Gallery</a>
           </li>
           <li>
-            <a href="contact.html"><i class="bx bx-envelope"></i> Contact</a>
+            <a href="contact.html"><img src="logo/envelope.svg" class="icon" alt="Contact"> Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <!-- Skills Hero -->
+    <section class="skills-hero" id="skills-hero">
+      <div class="skills-hero__bg-orbs">
+        <div class="skills-hero__orb skills-hero__orb--1"></div>
+        <div class="skills-hero__orb skills-hero__orb--2"></div>
+        <div class="skills-hero__orb skills-hero__orb--3"></div>
+      </div>
+      <div class="container skills-hero__inner">
+        <span class="skills-hero__badge">✦ Skills & Expertise</span>
+        <h1 class="skills-hero__title">Crafting Digital<br/><span class="skills-hero__title--accent">Experiences</span></h1>
+        <p class="skills-hero__subtitle">A versatile toolkit honed through passion, practice, and real-world projects.</p>
+      </div>
+    </section>
+
+    <!-- Core Skills Section -->
+    <section class="skills-section" id="skills">
       <div class="container">
-        <h2>My Skills</h2>
+        <div class="section-header">
+          <span class="section-tag">What I Do</span>
+          <h2 class="section-title">Core Competencies</h2>
+          <p class="section-desc">From concept to deployment — here's what I bring to every project.</p>
+        </div>
+
         <div class="skills-grid">
-          <div class="skill-card">
-            <h3>Web Design</h3>
-            <p>
-              Creating visually stunning and user-friendly web designs that
-              engage and convert visitors.
-            </p>
+          <!-- Card 1: Web Design -->
+          <div class="skill-card" id="skill-web-design">
+            <div class="skill-card__icon-wrap">
+              <svg class="skill-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <path d="M3 9h18"/>
+                <path d="M9 21V9"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Web Design</h3>
+            <p class="skill-card__desc">Creating visually stunning and user-friendly web designs that engage and convert visitors.</p>
+            <div class="skill-card__bar-wrap">
+              <div class="skill-card__bar" data-level="90">
+                <div class="skill-card__bar-fill"></div>
+              </div>
+              <span class="skill-card__bar-label">90%</span>
+            </div>
+            <div class="skill-card__tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Adobe XD</span>
+              <span class="skill-tag">Photoshop</span>
+            </div>
           </div>
-          <div class="skill-card">
-            <h3>Frontend Development</h3>
-            <p>
-              Building responsive, interactive websites using HTML, CSS, and
-              JavaScript technologies.
-            </p>
+
+          <!-- Card 2: Frontend Development -->
+          <div class="skill-card" id="skill-frontend-dev">
+            <div class="skill-card__icon-wrap">
+              <svg class="skill-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Frontend Development</h3>
+            <p class="skill-card__desc">Building responsive, interactive websites using HTML, CSS, and JavaScript technologies.</p>
+            <div class="skill-card__bar-wrap">
+              <div class="skill-card__bar" data-level="85">
+                <div class="skill-card__bar-fill"></div>
+              </div>
+              <span class="skill-card__bar-label">85%</span>
+            </div>
+            <div class="skill-card__tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
           </div>
-          <div class="skill-card">
-            <h3>Backend Development</h3>
-            <p>
-              Developing robust server-side solutions with databases and APIs
-              for seamless functionality.
-            </p>
+
+          <!-- Card 3: Backend Development -->
+          <div class="skill-card" id="skill-backend-dev">
+            <div class="skill-card__icon-wrap">
+              <svg class="skill-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2"/>
+                <rect x="2" y="14" width="20" height="8" rx="2"/>
+                <circle cx="6" cy="6" r="1"/>
+                <circle cx="6" cy="18" r="1"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Backend Development</h3>
+            <p class="skill-card__desc">Developing robust server-side solutions with databases and APIs for seamless functionality.</p>
+            <div class="skill-card__bar-wrap">
+              <div class="skill-card__bar" data-level="75">
+                <div class="skill-card__bar-fill"></div>
+              </div>
+              <span class="skill-card__bar-label">75%</span>
+            </div>
+            <div class="skill-card__tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">REST API</span>
+            </div>
           </div>
-          <div class="skill-card">
-            <h3>UI/UX Design</h3>
-            <p>
-              Crafting intuitive user interfaces and experiences that delight
-              and satisfy users.
-            </p>
+
+          <!-- Card 4: UI/UX Design -->
+          <div class="skill-card" id="skill-uiux-design">
+            <div class="skill-card__icon-wrap">
+              <svg class="skill-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">UI/UX Design</h3>
+            <p class="skill-card__desc">Crafting intuitive user interfaces and experiences that delight and satisfy users.</p>
+            <div class="skill-card__bar-wrap">
+              <div class="skill-card__bar" data-level="88">
+                <div class="skill-card__bar-fill"></div>
+              </div>
+              <span class="skill-card__bar-label">88%</span>
+            </div>
+            <div class="skill-card__tags">
+              <span class="skill-tag">Prototyping</span>
+              <span class="skill-tag">Wireframing</span>
+              <span class="skill-tag">User Research</span>
+            </div>
           </div>
-          <div class="skill-card">
-            <h3>Responsive Design</h3>
-            <p>
-              Ensuring websites look perfect and function flawlessly on all
-              devices and screen sizes.
-            </p>
+
+          <!-- Card 5: Responsive Design -->
+          <div class="skill-card" id="skill-responsive-design">
+            <div class="skill-card__icon-wrap">
+              <svg class="skill-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                <path d="M12 18h.01"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Responsive Design</h3>
+            <p class="skill-card__desc">Ensuring websites look perfect and function flawlessly on all devices and screen sizes.</p>
+            <div class="skill-card__bar-wrap">
+              <div class="skill-card__bar" data-level="92">
+                <div class="skill-card__bar-fill"></div>
+              </div>
+              <span class="skill-card__bar-label">92%</span>
+            </div>
+            <div class="skill-card__tags">
+              <span class="skill-tag">Media Queries</span>
+              <span class="skill-tag">Flexbox</span>
+              <span class="skill-tag">Grid</span>
+            </div>
           </div>
-          <div class="skill-card">
-            <h3>Problem Solving</h3>
-            <p>
-              Analyzing challenges and implementing creative solutions with
-              precision and efficiency.
-            </p>
+
+          <!-- Card 6: Problem Solving -->
+          <div class="skill-card" id="skill-problem-solving">
+            <div class="skill-card__icon-wrap">
+              <svg class="skill-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+                <circle cx="12" cy="17" r="0.5"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Problem Solving</h3>
+            <p class="skill-card__desc">Analyzing challenges and implementing creative solutions with precision and efficiency.</p>
+            <div class="skill-card__bar-wrap">
+              <div class="skill-card__bar" data-level="95">
+                <div class="skill-card__bar-fill"></div>
+              </div>
+              <span class="skill-card__bar-label">95%</span>
+            </div>
+            <div class="skill-card__tags">
+              <span class="skill-tag">Debugging</span>
+              <span class="skill-tag">Algorithms</span>
+              <span class="skill-tag">Architecture</span>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Marquee -->
+    <section class="tech-stack" id="tech-stack">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technologies</span>
+          <h2 class="section-title">Tech Stack</h2>
+        </div>
+        <div class="tech-stack__marquee-wrapper">
+          <div class="tech-stack__marquee">
+            <div class="tech-stack__item">
+              <img src="logo/html5.svg" class="tech-stack__logo" alt="HTML5" />
+              <span>HTML5</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/css3.svg" class="tech-stack__logo" alt="CSS3" />
+              <span>CSS3</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/code.svg" class="tech-stack__logo" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/figma-alt.svg" class="tech-stack__logo" alt="Figma" />
+              <span>Figma</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/flutter.svg" class="tech-stack__logo" alt="Flutter" />
+              <span>Flutter</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/github.svg" class="tech-stack__logo" alt="GitHub" />
+              <span>GitHub</span>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="tech-stack__item">
+              <img src="logo/html5.svg" class="tech-stack__logo" alt="HTML5" />
+              <span>HTML5</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/css3.svg" class="tech-stack__logo" alt="CSS3" />
+              <span>CSS3</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/code.svg" class="tech-stack__logo" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/figma-alt.svg" class="tech-stack__logo" alt="Figma" />
+              <span>Figma</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/flutter.svg" class="tech-stack__logo" alt="Flutter" />
+              <span>Flutter</span>
+            </div>
+            <div class="tech-stack__item">
+              <img src="logo/github.svg" class="tech-stack__logo" alt="GitHub" />
+              <span>GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="skills-cta" id="skills-cta">
+      <div class="container skills-cta__inner">
+        <h2 class="skills-cta__title">Interested in working together?</h2>
+        <p class="skills-cta__desc">Let's turn your ideas into reality with clean code and beautiful design.</p>
+        <a href="contact.html" class="skills-cta__button">
+          <img src="logo/envelope.svg" class="icon" alt="Contact" />
+          Get In Touch
+        </a>
       </div>
     </section>
 
@@ -94,5 +286,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/skills.js"></script>
   </body>
 </html>

@@ -3,68 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get in touch with Glory Manurung — reach out via email, phone, or social media for collaborations and inquiries." />
     <title>Contact - Glory Manurung</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body>
     <nav>
       <div class="container">
         <a href="index.html" class="logo">Glory Manurung</a>
         <ul>
-          <li>
-            <a href="index.html"><i class="bx bx-home"></i> Home</a>
-          </li>
-          <li>
-            <a href="about.html"><i class="bx bx-user"></i> About</a>
-          </li>
-          <li>
-            <a href="skills.html"><i class="bx bx-code-alt"></i> Skills</a>
-          </li>
-          <li>
-            <a href="portfolio.html"
-              ><i class="bx bx-briefcase"></i> Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="contact.html" class="active"
-              ><i class="bx bx-envelope"></i> Contact</a
-            >
-          </li>
+          <li><a href="index.html"><img src="logo/home.svg" class="icon" alt="Home"> Home</a></li>
+          <li><a href="blog.html"><img src="logo/user.svg" class="icon" alt="User"> Blog</a></li>
+          <li><a href="skills.html"><img src="logo/code-alt.svg" class="icon" alt="Skills"> Skills</a></li>
+          <li><a href="gallery.html"><img src="logo/education.svg" class="icon" alt="Portfolio"> Gallery</a></li>
+          <li><a href="contact.html" class="active"><img src="logo/envelope.svg" class="icon" alt="Contact"> Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- Hero -->
+    <section class="ct-hero">
+      <div class="ct-hero__orbs">
+        <div class="ct-hero__orb ct-hero__orb--1"></div>
+        <div class="ct-hero__orb ct-hero__orb--2"></div>
+      </div>
+      <div class="container ct-hero__inner">
+        <span class="ct-hero__badge">✦ Let's Talk</span>
+        <h1 class="ct-hero__title">Get in<br/><span class="ct-hero__accent">Touch</span></h1>
+        <p class="ct-hero__subtitle">Have a project in mind, a question, or just want to say hello? I'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="ct-main" id="contact">
       <div class="container">
-        <h2>Get in Touch</h2>
-        <div class="contact-info">
-          <p>
-            <i class="bx bx-envelope"></i> Email:
-            <a href="mailto:glory@example.com">glory@example.com</a>
-          </p>
-          <p>
-            <i class="bx bx-phone"></i> Phone:
-            <a href="tel:+1234567890">+1 (234) 567-890</a>
-          </p>
-        </div>
-        <div class="social-links">
-          <a href="https://linkedin.com" title="LinkedIn"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a href="https://github.com" title="GitHub"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="https://twitter.com" title="Twitter"
-            ><i class="bx bxl-twitter"></i
-          ></a>
-          <a href="https://instagram.com" title="Instagram"
-            ><i class="bx bxl-instagram"></i
-          ></a>
+        <div class="ct-layout">
+
+          <!-- Contact Form -->
+          <div class="ct-form-wrap" id="contact-form-wrap">
+            <div class="ct-section-header">
+              <span class="ct-section-tag">Send a Message</span>
+              <h2 class="ct-section-title">Write to Me</h2>
+            </div>
+            <form class="ct-form" id="contact-form" action="#" method="POST">
+              <div class="ct-form__row">
+                <div class="ct-form__group">
+                  <label for="ct-name" class="ct-form__label">Your Name</label>
+                  <input type="text" id="ct-name" name="name" class="ct-form__input" placeholder="John Doe" required />
+                </div>
+                <div class="ct-form__group">
+                  <label for="ct-email" class="ct-form__label">Your Email</label>
+                  <input type="email" id="ct-email" name="email" class="ct-form__input" placeholder="john@example.com" required />
+                </div>
+              </div>
+              <div class="ct-form__group">
+                <label for="ct-subject" class="ct-form__label">Subject</label>
+                <input type="text" id="ct-subject" name="subject" class="ct-form__input" placeholder="Project Inquiry" />
+              </div>
+              <div class="ct-form__group">
+                <label for="ct-message" class="ct-form__label">Message</label>
+                <textarea id="ct-message" name="message" class="ct-form__input ct-form__textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+              </div>
+              <button type="submit" class="ct-form__submit" id="ct-submit">
+                <img src="logo/envelope.svg" class="icon" alt="Send" />
+                Send Message
+              </button>
+              <p class="ct-form__status" id="ct-status"></p>
+            </form>
+          </div>
+
+          <!-- Info Sidebar -->
+          <aside class="ct-sidebar">
+            <div class="ct-section-header">
+              <span class="ct-section-tag">Contact Info</span>
+              <h2 class="ct-section-title">Reach Out</h2>
+            </div>
+
+            <!-- Info Cards -->
+            <div class="ct-info-cards">
+              <a href="mailto:glorymaunurung@gmail.com" class="ct-info-card" id="info-email">
+                <div class="ct-info-card__icon">
+                  <img src="logo/envelope.svg" class="icon" alt="Email" />
+                </div>
+                <div>
+                  <span class="ct-info-card__label">Email</span>
+                  <span class="ct-info-card__value">glorymaunurung@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:+6285210381486" class="ct-info-card" id="info-phone">
+                <div class="ct-info-card__icon">
+                  <img src="logo/whatsapp.svg" class="icon" alt="Phone" />
+                </div>
+                <div>
+                  <span class="ct-info-card__label">Phone / WhatsApp</span>
+                  <span class="ct-info-card__value">+62 852-1038-1486</span>
+                </div>
+              </a>
+              <div class="ct-info-card" id="info-location">
+                <div class="ct-info-card__icon">
+                  <img src="logo/location.svg" class="icon" alt="Location" />
+                </div>
+                <div>
+                  <span class="ct-info-card__label">Location</span>
+                  <span class="ct-info-card__value">Indonesia</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Socials -->
+            <div class="ct-socials">
+              <span class="ct-socials__label">Find me on</span>
+              <div class="ct-socials__row">
+                <a href="https://linkedin.com" title="LinkedIn" class="ct-social" id="social-linkedin">
+                  <img src="logo/linkedin.svg" class="icon" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com" title="GitHub" class="ct-social" id="social-github">
+                  <img src="logo/github.svg" class="icon" alt="GitHub" />
+                </a>
+                <a href="https://twitter.com" title="Twitter" class="ct-social" id="social-twitter">
+                  <img src="logo/twitter.svg" class="icon" alt="Twitter" />
+                </a>
+                <a href="https://instagram.com" title="Instagram" class="ct-social" id="social-instagram">
+                  <img src="logo/instagram.svg" class="icon" alt="Instagram" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="ct-availability">
+              <div class="ct-availability__dot"></div>
+              <span>Currently available for freelance work</span>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -74,5 +148,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>

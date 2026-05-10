@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blog — Articles, thoughts, and stories by Glory Manurung on web development, design, and creative experiences." />
+    <title>Blog - Glory Manurung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="index.html" class="logo">Glory Manurung</a>
+        <ul>
+          <li><a href="index.html"><img src="logo/home.svg" class="icon" alt="Home"> Home</a></li>
+          <li><a href="blog.html" class="active"><img src="logo/user.svg" class="icon" alt="User"> Blog</a></li>
+          <li><a href="skills.html"><img src="logo/code-alt.svg" class="icon" alt="Skills"> Skills</a></li>
+          <li><a href="gallery.html"><img src="logo/education.svg" class="icon" alt="Portfolio"> Gallery</a></li>
+          <li><a href="contact.html"><img src="logo/envelope.svg" class="icon" alt="Contact"> Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="bl-hero">
+      <div class="bl-hero__orbs">
+        <div class="bl-hero__orb bl-hero__orb--1"></div>
+        <div class="bl-hero__orb bl-hero__orb--2"></div>
+      </div>
+      <div class="container bl-hero__inner">
+        <span class="bl-hero__badge">✦ Blog & Stories</span>
+        <h1 class="bl-hero__title">Thoughts &<br/><span class="bl-hero__accent">Explorations</span></h1>
+        <p class="bl-hero__subtitle">Insights on web development, design philosophy, and creative journeys — straight from my desk.</p>
+      </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="bl-featured" id="featured">
+      <div class="container">
+        <div class="bl-section-header">
+          <span class="bl-section-tag">Featured</span>
+          <h2 class="bl-section-title">Latest Story</h2>
+        </div>
+        <article class="bl-featured-card" id="post-featured">
+          <div class="bl-featured-card__img-wrap">
+            <img src="blog/Karangturi.jpeg" alt="Karangturi International Choir Competition" class="bl-featured-card__img" />
+            <div class="bl-featured-card__overlay"></div>
+          </div>
+          <div class="bl-featured-card__body">
+            <div class="bl-featured-card__meta">
+              <span class="bl-tag">Experience</span>
+              <span class="bl-date">2026</span>
+            </div>
+            <h3 class="bl-featured-card__title">Karangturi International Choir Competition</h3>
+            <p class="bl-featured-card__excerpt">Exploring the memorable experiences, teamwork, and beautiful harmonies from this prestigious international choir competition. A journey of music, friendship, and personal growth.</p>
+            <a href="#" class="bl-read-more">Read Full Story <span class="bl-read-more__arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- All Articles -->
+    <section class="bl-articles" id="articles">
+      <div class="container">
+        <div class="bl-section-header">
+          <span class="bl-section-tag">Articles</span>
+          <h2 class="bl-section-title">All Posts</h2>
+        </div>
+
+        <div class="bl-grid">
+          <article class="bl-card" id="post-1">
+            <div class="bl-card__img-wrap">
+              <img src="blog/css-animations.png" alt="Mastering CSS Animations" class="bl-card__img" />
+            </div>
+            <div class="bl-card__body">
+              <div class="bl-card__meta">
+                <span class="bl-tag">CSS</span>
+                <span class="bl-date">2026</span>
+              </div>
+              <h3 class="bl-card__title">Mastering CSS Animations</h3>
+              <p class="bl-card__excerpt">A deep dive into creating smooth, performant, and engaging animations without relying on JavaScript libraries.</p>
+              <a href="#" class="bl-read-more">Read Article <span class="bl-read-more__arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="bl-card" id="post-2">
+            <div class="bl-card__img-wrap">
+              <img src="blog/design-empathy.png" alt="Designing with Empathy" class="bl-card__img" />
+            </div>
+            <div class="bl-card__body">
+              <div class="bl-card__meta">
+                <span class="bl-tag">UI/UX</span>
+                <span class="bl-date">2026</span>
+              </div>
+              <h3 class="bl-card__title">Designing with Empathy</h3>
+              <p class="bl-card__excerpt">Why understanding your users' struggles is the most important step in the UI/UX design process.</p>
+              <a href="#" class="bl-read-more">Read Article <span class="bl-read-more__arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="bl-card" id="post-3">
+            <div class="bl-card__img-wrap">
+              <img src="blog/Karangturi.jpeg" alt="My Creative Journey" class="bl-card__img" />
+            </div>
+            <div class="bl-card__body">
+              <div class="bl-card__meta">
+                <span class="bl-tag">Life</span>
+                <span class="bl-date">2026</span>
+              </div>
+              <h3 class="bl-card__title">My Creative Journey So Far</h3>
+              <p class="bl-card__excerpt">Reflecting on the path that led me from curiosity to crafting digital experiences — lessons, failures, and wins.</p>
+              <a href="#" class="bl-read-more">Read Article <span class="bl-read-more__arrow">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Glory Manurung. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

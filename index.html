@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Glory Manurung — Creative Web Developer & Designer. Explore my portfolio of modern, responsive web experiences." />
     <title>Glory Manurung - Portfolio</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -17,214 +18,288 @@
         <a href="index.html" class="logo">Glory Manurung</a>
         <ul>
           <li>
-            <a href="index.html" class="active"
-              ><i class="bx bx-home"></i> Home</a
-            >
+            <a href="index.html" class="active"><img src="logo/home.svg" class="icon" alt="Home"> Home</a>
           </li>
           <li>
-            <a href="about.html"><i class="bx bx-user"></i> About</a>
+            <a href="blog.html"><img src="logo/user.svg" class="icon" alt="User"> Blog</a>
           </li>
           <li>
-            <a href="skills.html"><i class="bx bx-code-alt"></i> Skills</a>
+            <a href="skills.html"><img src="logo/code-alt.svg" class="icon" alt="Skills"> Skills</a>
           </li>
           <li>
-            <a href="portfolio.html"
-              ><i class="bx bx-briefcase"></i> Portfolio</a
-            >
+            <a href="gallery.html"><img src="logo/education.svg" class="icon" alt="Portfolio"> Gallery</a>
           </li>
           <li>
-            <a href="contact.html"><i class="bx bx-envelope"></i> Contact</a>
+            <a href="contact.html"><img src="logo/envelope.svg" class="icon" alt="Contact"> Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>Welcome to My Portfolio</h1>
-          <p>Creative Web Developer & Designer</p>
-          <a href="portfolio.html" class="cta-button"
-            ><i class="bx bx-show"></i> View My Work</a
-          >
-          <a href="contact.html" class="cta-button2"
-            ><i class="bx bx-message-square-dots"></i> Get in Touch</a
-          >
+    <!-- ===== HERO ===== -->
+    <section class="hm-hero" id="hero">
+      <div class="hm-hero__orbs">
+        <div class="hm-hero__orb hm-hero__orb--1"></div>
+        <div class="hm-hero__orb hm-hero__orb--2"></div>
+        <div class="hm-hero__orb hm-hero__orb--3"></div>
+      </div>
+      <div class="hm-hero__grid-overlay"></div>
+
+      <div class="container hm-hero__inner">
+        <div class="hm-hero__text">
+          <span class="hm-hero__badge">✦ Available for freelance work</span>
+          <h1 class="hm-hero__title">
+            Hi, I'm <span class="hm-hero__name">Glory</span><br/>
+            <span class="hm-hero__role-line">
+              I'm a <span class="hm-hero__role" id="typed-role"></span><span class="hm-hero__cursor">|</span>
+            </span>
+          </h1>
+          <p class="hm-hero__subtitle">
+            I craft pixel-perfect, performant web experiences that turn visitors into loyal users. Let's build something extraordinary.
+          </p>
+          <div class="hm-hero__actions">
+            <a href="gallery.html" class="hm-btn hm-btn--primary" id="cta-view-work">
+              <img src="logo/eye.svg" class="icon" alt="View" /> View My Work
+            </a>
+            <a href="contact.html" class="hm-btn hm-btn--outline" id="cta-contact">
+              <img src="logo/message-dots-2.svg" class="icon" alt="Message" /> Get in Touch
+            </a>
+          </div>
         </div>
-        <div class="hero-image">
+        <div class="hm-hero__portrait">
+          <div class="hm-hero__portrait-ring"></div>
           <img
             src="WhatsApp Image 2026-03-15 at 6.09.01 PM.jpeg"
             alt="Glory Manurung Photo"
+            class="hm-hero__portrait-img"
           />
+          <div class="hm-hero__portrait-badge hm-hero__portrait-badge--top">
+            <span>🎨</span> Designer
+          </div>
+          <div class="hm-hero__portrait-badge hm-hero__portrait-badge--bottom">
+            <span>💻</span> Developer
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hm-hero__scroll-hint" aria-label="Scroll down">
+        <svg width="20" height="30" viewBox="0 0 20 30"><rect x="1" y="1" width="18" height="28" rx="9" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="10" cy="9" r="2" fill="currentColor" class="hm-hero__scroll-dot"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="hm-about" id="about">
+      <div class="container">
+        <div class="hm-section-header">
+          <span class="hm-section-tag">Who I Am</span>
+          <h2 class="hm-section-title">About Me</h2>
+        </div>
+
+        <div class="hm-about__grid">
+          <div class="hm-about__card">
+            <p class="hm-about__text">
+              Hello! I'm <strong>Glory Manurung</strong>, a passionate web developer with a keen
+              eye for design and a love for creating beautiful, functional
+              websites. With expertise in modern web technologies and a commitment
+              to excellence, I transform ideas into stunning digital experiences.
+            </p>
+            <p class="hm-about__text">
+              My journey in web development has equipped me with the skills to
+              tackle complex challenges and deliver exceptional results — from
+              pixel-perfect frontends to robust backend systems.
+            </p>
+          </div>
+
+          <div class="hm-about__stats">
+            <div class="hm-stat" id="stat-projects">
+              <span class="hm-stat__number" data-target="2">0</span><span class="hm-stat__suffix">+</span>
+              <span class="hm-stat__label">Projects Completed</span>
+            </div>
+            <div class="hm-stat" id="stat-clients">
+              <span class="hm-stat__number" data-target="1">0</span><span class="hm-stat__suffix">+</span>
+              <span class="hm-stat__label">Happy Clients</span>
+            </div>
+            <div class="hm-stat" id="stat-experience">
+              <span class="hm-stat__number" data-target="1">0</span><span class="hm-stat__suffix">+</span>
+              <span class="hm-stat__label">Years Experience</span>
+            </div>
+            <div class="hm-stat" id="stat-awards">
+              <span class="hm-stat__number" data-target="4">0</span>
+              <span class="hm-stat__label">Certifications</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- ===== SKILLS ===== -->
+    <section class="hm-skills" id="skills">
       <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <p>
-            Hello! I'm Glory Manurung, a passionate web developer with a keen
-            eye for design and a love for creating beautiful, functional
-            websites. With expertise in modern web technologies and a commitment
-            to excellence, I transform ideas into stunning digital experiences.
-            My journey in web development has equipped me with the skills to
-            tackle complex challenges and deliver exceptional results.
-          </p>
+        <div class="hm-section-header">
+          <span class="hm-section-tag">What I Do</span>
+          <h2 class="hm-section-title">Skills</h2>
         </div>
-      </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
+        <div class="hm-skills__grid">
+          <div class="hm-skill-card" id="hm-skill-1">
+            <div class="hm-skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
             <h3>Web Design</h3>
-            <p>
-              Creating visually stunning and user-friendly web designs that
-              engage and convert visitors.
-            </p>
+            <p>Creating visually stunning and user-friendly web designs that engage and convert visitors.</p>
           </div>
-          <div class="skill-card">
+          <div class="hm-skill-card" id="hm-skill-2">
+            <div class="hm-skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
             <h3>Frontend Development</h3>
-            <p>
-              Building responsive, interactive websites using HTML, CSS, and
-              JavaScript technologies.
-            </p>
+            <p>Building responsive, interactive websites using HTML, CSS, and JavaScript technologies.</p>
           </div>
-          <div class="skill-card">
+          <div class="hm-skill-card" id="hm-skill-3">
+            <div class="hm-skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
+            </div>
             <h3>Backend Development</h3>
-            <p>
-              Developing robust server-side solutions with databases and APIs
-              for seamless functionality.
-            </p>
+            <p>Developing robust server-side solutions with databases and APIs for seamless functionality.</p>
           </div>
-          <div class="skill-card">
+          <div class="hm-skill-card" id="hm-skill-4">
+            <div class="hm-skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
             <h3>UI/UX Design</h3>
-            <p>
-              Crafting intuitive user interfaces and experiences that delight
-              and satisfy users.
-            </p>
+            <p>Crafting intuitive user interfaces and experiences that delight and satisfy users.</p>
           </div>
-          <div class="skill-card">
+          <div class="hm-skill-card" id="hm-skill-5">
+            <div class="hm-skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            </div>
             <h3>Responsive Design</h3>
-            <p>
-              Ensuring websites look perfect and function flawlessly on all
-              devices and screen sizes.
-            </p>
+            <p>Ensuring websites look perfect and function flawlessly on all devices and screen sizes.</p>
           </div>
-          <div class="skill-card">
+          <div class="hm-skill-card" id="hm-skill-6">
+            <div class="hm-skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="0.5"/></svg>
+            </div>
             <h3>Problem Solving</h3>
-            <p>
-              Analyzing challenges and implementing creative solutions with
-              precision and efficiency.
-            </p>
+            <p>Analyzing challenges and implementing creative solutions with precision and efficiency.</p>
           </div>
+        </div>
+
+        <div class="hm-skills__more">
+          <a href="skills.html" class="hm-btn hm-btn--ghost">Explore All Skills →</a>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="hm-portfolio" id="portfolio">
       <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <div class="portfolio-item-content">
-              <h3>Project One</h3>
-              <p>
-                A modern e-commerce platform with responsive design and seamless
-                user experience.
-              </p>
-              <a href="#">View Project →</a>
+        <div class="hm-section-header">
+          <span class="hm-section-tag">My Work</span>
+          <h2 class="hm-section-title">Featured Projects</h2>
+        </div>
+
+        <div class="hm-portfolio__grid">
+          <div class="hm-project-card hm-project-card--wide" id="project-1">
+            <div class="hm-project-card__img-wrap">
+              <img src="images/gallery/ecommerce.png" alt="E-Commerce Platform" class="hm-project-card__img" />
+            </div>
+            <div class="hm-project-card__body">
+              <span class="hm-project-card__tag">E-Commerce</span>
+              <h3>E-Commerce Platform</h3>
+              <p>A modern e-commerce platform with responsive design and seamless user experience.</p>
+              <a href="gallery.html" class="hm-project-card__link">View Project →</a>
             </div>
           </div>
-          <div class="portfolio-item">
-            <div class="portfolio-item-content">
-              <h3>Project Two</h3>
-              <p>
-                Business website with custom CMS integration for easy content
-                management.
-              </p>
-              <a href="#">View Project →</a>
+
+          <div class="hm-project-card" id="project-2">
+            <div class="hm-project-card__img-wrap">
+              <img src="images/gallery/dashboard.png" alt="Corporate Dashboard" class="hm-project-card__img" />
+            </div>
+            <div class="hm-project-card__body">
+              <span class="hm-project-card__tag">Dashboard</span>
+              <h3>Corporate Dashboard</h3>
+              <p>Business website with custom CMS integration for easy content management.</p>
+              <a href="gallery.html" class="hm-project-card__link">View Project →</a>
             </div>
           </div>
-          <div class="portfolio-item">
-            <div class="portfolio-item-content">
-              <h3>Project Three</h3>
-              <p>
-                Interactive web application with real-time features and advanced
-                functionality.
-              </p>
-              <a href="#">View Project →</a>
+
+          <div class="hm-project-card" id="project-3">
+            <div class="hm-project-card__img-wrap">
+              <img src="images/gallery/mobile-app.png" alt="Mobile App UI" class="hm-project-card__img" />
+            </div>
+            <div class="hm-project-card__body">
+              <span class="hm-project-card__tag">Mobile</span>
+              <h3>Mobile App UI</h3>
+              <p>Interactive web application with real-time features and advanced functionality.</p>
+              <a href="gallery.html" class="hm-project-card__link">View Project →</a>
             </div>
           </div>
-          <div class="portfolio-item">
-            <div class="portfolio-item-content">
-              <h3>Project Four</h3>
-              <p>
-                Innovative design solution featuring cutting-edge UI and smooth
-                animations.
-              </p>
-              <a href="#">View Project →</a>
+
+          <div class="hm-project-card hm-project-card--wide" id="project-4">
+            <div class="hm-project-card__img-wrap">
+              <img src="images/gallery/agency.png" alt="Interactive Agency Site" class="hm-project-card__img" />
+            </div>
+            <div class="hm-project-card__body">
+              <span class="hm-project-card__tag">Agency</span>
+              <h3>Interactive Agency Site</h3>
+              <p>Innovative design solution featuring cutting-edge UI and smooth animations.</p>
+              <a href="gallery.html" class="hm-project-card__link">View Project →</a>
             </div>
           </div>
-          <div class="portfolio-item">
-            <div class="portfolio-item-content">
-              <h3>Project Five</h3>
-              <p>
-                Full-stack application with database integration and user
-                authentication system.
-              </p>
-              <a href="#">View Project →</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <div class="portfolio-item-content">
-              <h3>Project Six</h3>
-              <p>
-                Creative portfolio website showcasing artistic work with
-                stunning visuals.
-              </p>
-              <a href="#">View Project →</a>
-            </div>
-          </div>
+        </div>
+
+        <div class="hm-portfolio__more">
+          <a href="gallery.html" class="hm-btn hm-btn--ghost">View Full Gallery →</a>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- ===== CONTACT CTA ===== -->
+    <section class="hm-contact" id="contact">
       <div class="container">
-        <h2>Get in Touch</h2>
-        <div class="contact-info">
-          <p>
-            <i class="bx bx-envelope"></i> Email:
-            <a href="mailto:glorymaunurung@gmail.com">glorymaunurung@gmail.com</a>
-          </p>
-          <p>
-            <i class="bx bx-phone"></i> Phone:
-            <a href="tel:+1234567890">+1 (234) 567-890</a>
-          </p>
-        </div>
-        <div class="social-links">
-          <a href="https://linkedin.com" title="LinkedIn"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a href="https://github.com" title="GitHub"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="https://twitter.com" title="Twitter"
-            ><i class="bx bxl-twitter"></i
-          ></a>
-          <a href="https://instagram.com" title="Instagram"
-            ><i class="bx bxl-instagram"></i
-          ></a>
+        <div class="hm-contact__card">
+          <div class="hm-contact__glow"></div>
+          <div class="hm-section-header">
+            <span class="hm-section-tag">Let's Connect</span>
+            <h2 class="hm-section-title">Get in Touch</h2>
+          </div>
+
+          <div class="hm-contact__info">
+            <a href="mailto:glorymaunurung@gmail.com" class="hm-contact__item" id="contact-email">
+              <div class="hm-contact__item-icon">
+                <img src="logo/envelope.svg" class="icon" alt="Email" />
+              </div>
+              <div>
+                <span class="hm-contact__item-label">Email</span>
+                <span class="hm-contact__item-value">glorymaunurung@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+6285210381486" class="hm-contact__item" id="contact-phone">
+              <div class="hm-contact__item-icon">
+                <img src="logo/whatsapp.svg" class="icon" alt="Phone" />
+              </div>
+              <div>
+                <span class="hm-contact__item-label">Phone</span>
+                <span class="hm-contact__item-value">+62 852-1038-1486</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="hm-contact__socials">
+            <a href="https://linkedin.com" title="LinkedIn" class="hm-social" id="social-linkedin">
+              <img src="logo/linkedin.svg" class="icon" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com" title="GitHub" class="hm-social" id="social-github">
+              <img src="logo/github.svg" class="icon" alt="GitHub" />
+            </a>
+            <a href="https://twitter.com" title="Twitter" class="hm-social" id="social-twitter">
+              <img src="logo/twitter.svg" class="icon" alt="Twitter" />
+            </a>
+            <a href="https://instagram.com" title="Instagram" class="hm-social" id="social-instagram">
+              <img src="logo/instagram.svg" class="icon" alt="Instagram" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -235,5 +310,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>
