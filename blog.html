@@ -120,6 +120,30 @@
       </div>
     </section>
 
+    <!-- Full-Screen Article Modal -->
+    <div class="bl-modal" id="articleModal">
+      <div class="bl-modal__overlay" id="modalOverlay"></div>
+      <div class="bl-modal__content">
+        <button class="bl-modal__close" id="modalClose" aria-label="Close article">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="bl-modal__header">
+          <img id="modalImg" src="" alt="" class="bl-modal__img" />
+          <div class="bl-modal__header-content">
+            <div class="bl-modal__meta">
+              <span id="modalTag" class="bl-tag"></span>
+              <span id="modalDate" class="bl-date"></span>
+            </div>
+            <h1 id="modalTitle" class="bl-modal__title"></h1>
+          </div>
+        </div>
+        <div class="bl-modal__body">
+          <p id="modalExcerpt" class="bl-modal__excerpt"></p>
+          <div id="modalBody" class="bl-modal__text"></div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <p>&copy; 2026 Glory Manurung. All rights reserved.</p>
     </footer>

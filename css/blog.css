@@ -70,6 +70,44 @@
 .bl-card:hover .bl-card__title { color:var(--bl-accent); }
 .bl-card__excerpt { font-family:var(--bl-font); font-size:.88rem; color:var(--bl-text2); line-height:1.65; margin-bottom:1.2rem; flex:1; }
 
+/* ======== FULL-SCREEN MODAL ======== */
+.bl-modal { position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:0; transition:opacity .3s ease; }
+.bl-modal.bl-modal--active { pointer-events:auto; opacity:1; }
+.bl-modal__overlay { position:fixed; inset:0; background:rgba(0,0,0,.85); backdrop-filter:blur(4px); pointer-events:none; }
+.bl-modal.bl-modal--active .bl-modal__overlay { pointer-events:auto; }
+.bl-modal__content { position:fixed; inset:0; z-index:10000; overflow-y:auto; padding:2rem 1rem; display:flex; align-items:flex-start; justify-content:center; pointer-events:none; animation:blModalSlideUp .4s ease-out; }
+.bl-modal.bl-modal--active .bl-modal__content { pointer-events:auto; }
+@keyframes blModalSlideUp { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+.bl-modal__close { position:fixed; top:2rem; right:2rem; z-index:99999; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); border-radius:50%; width:40px; height:40px; display:flex; align-items:center; justify-content:center; color:var(--bl-text); cursor:pointer; transition:all .3s; font-size:0; padding:0; }
+.bl-modal__close:hover { background:rgba(255,126,179,.2); border-color:var(--bl-accent); color:var(--bl-accent); }
+.bl-modal__close svg { width:24px; height:24px; }
+
+.bl-modal__header { position:relative; width:100%; max-width:900px; margin-bottom:3rem; margin-top:2rem; border-radius:var(--bl-radius); overflow:hidden; }
+.bl-modal__img { width:100%; height:400px; object-fit:cover; display:block; }
+.bl-modal__header-content { position:absolute; bottom:0; left:0; right:0; padding:3rem 2rem 2rem; background:linear-gradient(180deg,transparent,rgba(5,5,16,.95)); }
+.bl-modal__meta { display:flex; align-items:center; gap:.8rem; margin-bottom:1rem; }
+.bl-modal__title { font-family:var(--bl-font); font-size:clamp(1.6rem,5vw,2.4rem); font-weight:800; color:var(--bl-text); line-height:1.2; margin:0; }
+
+.bl-modal__body { width:100%; max-width:900px; background:var(--bl-card); border:1px solid var(--bl-border); border-radius:var(--bl-radius); padding:3rem; backdrop-filter:blur(12px); }
+.bl-modal__excerpt { font-family:var(--bl-font); font-size:1.1rem; color:var(--bl-text2); line-height:1.7; margin:0 0 2.5rem 0; font-weight:500; border-bottom:1px solid var(--bl-border); padding-bottom:2rem; }
+.bl-modal__text { font-family:var(--bl-font); font-size:1rem; line-height:1.8; color:var(--bl-text2); }
+.bl-modal__text p { margin:0 0 1.5rem 0; }
+.bl-modal__text h2 { font-family:var(--bl-font); font-size:1.4rem; font-weight:700; color:var(--bl-text); margin:2rem 0 1rem 0; }
+.bl-modal__text h3 { font-family:var(--bl-font); font-size:1.15rem; font-weight:700; color:var(--bl-text); margin:1.5rem 0 .8rem 0; }
+.bl-modal__text code { background:rgba(255,126,179,.1); padding:.2rem .6rem; border-radius:4px; color:var(--bl-accent); font-family:'Courier New',monospace; }
+.bl-modal__text pre { background:rgba(0,0,0,.3); padding:1.5rem; border-radius:8px; overflow-x:auto; margin:1.5rem 0; }
+.bl-modal__text pre code { background:none; padding:0; color:var(--bl-text2); }
+.bl-modal__text ul,
+.bl-modal__text ol { margin:1.5rem 0 1.5rem 2rem; }
+.bl-modal__text li { margin-bottom:.5rem; }
+.bl-modal__text a { color:var(--bl-accent); text-decoration:none; transition:color .3s; }
+.bl-modal__text a:hover { color:#fff; text-decoration:underline; }
+.bl-modal__text blockquote { border-left:4px solid var(--bl-accent); padding-left:1.5rem; margin:1.5rem 0; color:var(--bl-muted); font-style:italic; }
+
+/* Prevent body scroll when modal is open */
+body.bl-modal-open { overflow:hidden; }
+body.bl-modal-open nav { pointer-events:none; }
+
 /* ======== RESPONSIVE ======== */
 @media(max-width:768px) {
   .bl-hero { min-height:35vh; padding:5rem 1.5rem 3rem; }
@@ -77,4 +115,10 @@
   .bl-featured-card__img-wrap { width:100%; min-height:220px; }
   .bl-featured-card__overlay { background:linear-gradient(180deg,transparent 50%,rgba(5,5,16,.85)); }
   .bl-grid { grid-template-columns:1fr; }
+  .bl-modal__close { top:1rem; right:1rem; }
+  .bl-modal__content { padding:1rem; }
+  .bl-modal__header { margin-top:3.5rem; margin-bottom:2rem; }
+  .bl-modal__img { height:250px; }
+  .bl-modal__header-content { padding:2rem 1.5rem 1.5rem; }
+  .bl-modal__body { padding:1.5rem; }
 }
